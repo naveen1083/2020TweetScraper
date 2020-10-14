@@ -8,6 +8,10 @@ from TweetScraper.utils import mkdirs
 logger = logging.getLogger(__name__)
 SETTINGS = get_project_settings()
 
+class ReturnPipeline(object):
+    def process_item(self, item, spider):
+        return item
+    
 class SaveToFilePipeline(object):
     ''' pipeline that save data to disk '''
 

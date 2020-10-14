@@ -8,7 +8,9 @@ LOG_LEVEL = 'INFO'
 SPIDER_MODULES = ['TweetScraper.spiders']
 NEWSPIDER_MODULE = 'TweetScraper.spiders'
 ITEM_PIPELINES = {
-    'TweetScraper.pipelines.SaveToFilePipeline':100,
+    'TweetScraper.pipelines.ReturnPipeline':100,
+    #'TweetScraper.pipelines.SaveToFilePipeline':100,
+    
 }
 
 # settings for where to save data on disk
